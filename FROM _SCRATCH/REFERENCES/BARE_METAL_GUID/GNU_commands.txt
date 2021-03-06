@@ -1,0 +1,69 @@
+1) Go to workspace where all the .c and .h files are located.
+
+
+for documentations 
+https://gcc.gnu.org/onlinedocs/
+https://gcc.gnu.org/onlinedocs/gcc-7.5.0/gcc/Overall-Options.html#Overall-Options
+
+COMPILE COMMAND
+
+
+(compiles, assembles, links)
+	
+arm-none-eabi-gcc main.c arguments -o main.o
+		    ^         		^
+		    | 	      		|
+		    |	      		|
+		source file   		|
+		(dependendancy)	   target file
+				    (target)
+
+
+-c is to only generate a object file and not to link and 
+outputs file.o
+
+-mcpu=name is to specify the name of the target ARM processor
+name can be cortex-m3, cortex-m4 etc.
+
+-mthumb is to execute only in thumb mode, cortex-mx 
+processors can only execute thumb instructions.(default 
+is in arm mode not in thumb mode)
+
+-S is to only generate a assembly file and outputs file.s/
+file.asm
+
+
+
+	MAKEFILE
+--make commands works upon makefile.
+
+--$^ denotes dependency
+
+--$@ denotes target
+
+--$ sign acts as a pointer to a predefined variable
+eg. MACH = cortex-m3
+    CFLAG = -c -mcpu=$(MACH)
+here $(MACH) will be replaced by cortex-m3
+
+--To create a target a recipe needs to written in the below manner.
+<target file>:<dependency file>
+	<the Recipe>
+eg. main.o:main.c
+	$(CC) $(CFLAG) main.c -o main.o
+
+	OR
+    main.o:main.c
+	$(CC) $(CFLAGS) $@ -o $^
+
+--To turn on warning use this argument
+	-wall 
+
+
+
+--save as Makefile
+
+
+
+
+ 

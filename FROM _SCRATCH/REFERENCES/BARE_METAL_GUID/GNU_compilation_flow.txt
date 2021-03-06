@@ -1,0 +1,70 @@
+arm-none-eabi-gcc is compiler, linker, assembler
+arm-none-eabi-as  is a assembler
+arm-none-eabi-ld  is a linker
+
+arm-none-eabi-objdump
+arm-none-eabi-readelf    are Elf file analyzer
+arm-none-eabi-nm  
+
+arm-none-eabi-objcopy  is format converter
+ 
+
+
+	HERE COMPILER IS arm-none-eabi-gcc 
+
+1)
+		     ___________
+		    |		|
+	main.c----->|  Compiler |------>main.i
+		    |___________|
+		pre-processing stage
+   (all pre-processinf directives will be resolved)
+
+ 
+2)	 	     ___________
+		    |		|
+	main.i----->|  Compiler |------>main.s
+		    |___________|
+		   Code generation stage
+(Higher level language code statements will be converted 
+      to processor architecture level mnemonics)
+
+
+3)	 	     ___________
+		    |		|
+	main.s----->|  Compiler |------>main.o  (relocatable
+		    |___________|              object file)
+		   Assembler stage
+(Assembly level mnemonics are converted to opcodes(machine 
+		codes for instructions))
+
+
+
+			LINKING      
+				_____
+			       | .a  |  other libraries
+			       |_____|
+				/
+			       /
+4)	 	     _________/__
+		    |		|
+	main.o----->|   linker  |------>main.elf (extensible/
+		    |___________|             	linkable
+		     linking stage		   file)
+
+				  _____
+				 |.ihex|
+ 				 |_____| and other formats
+				   /
+5)	 	     ___________  /
+		    |	objcopy	|/
+      main.elf----->|    tool   |------>.bin format
+		    |___________|        
+
+
+
+
+
+
+
+

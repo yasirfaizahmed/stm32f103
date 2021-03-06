@@ -1,0 +1,42 @@
+1)the whole contents to be falshed onto the target is made of 
+ .text section -->holds all the code instructions to be flashed 
+to SRAM
+ .data section -->holds the variable data
+ .bss section -->
+ .coment section
+
+2)Disassembling the .text section using command 
+arm-none-eabi-objdump.exe main.o -d 
+converts the object file contents to assembly opcodes contents 
+
+3)In the compiler all the contents to be flashed have a 
+base address of 0x00000000 and gets incremented with a 
+particular offset for every consicutive instruction.
+
+4)But in the case of a target the base address of the code or 
+data is not 0x00000000 and its unique of every uC memorymap.
+
+5)If one more file1.c is made to work with main.c, then the both assembled files .text sections start at base address 
+0x00000000 and 0x00000000 and that will create a conflict.
+THATS WHY WE NEED A TO RELOCATE THEM USING LINKER/LINKERSCRIPT.
+BY ASSIGNING RELOCATABLE ADDRESS TO THE RESPECTIVE SECTIONS.
+
+6)To generate the final ELF file, we need to link all
+ the object files using linker scripts.
+this linker script has an extension .ld
+and thid linker script file must be supplied at the
+linking phase to the linker using -T 
+
+
+7) some important linker scripts commands
+	ENTRY
+	MEMORY
+	SECTIONS
+	KEEP
+	ALIGN
+	AT>
+
+
+	
+
+

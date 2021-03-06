@@ -1,0 +1,60 @@
+
+blinky.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4b19      	ldr	r3, [pc, #100]	; (6c <main+0x6c>)
+   8:	681b      	ldr	r3, [r3, #0]
+   a:	4a18      	ldr	r2, [pc, #96]	; (6c <main+0x6c>)
+   c:	f043 0310 	orr.w	r3, r3, #16
+  10:	6013      	str	r3, [r2, #0]
+  12:	4b17      	ldr	r3, [pc, #92]	; (70 <main+0x70>)
+  14:	681b      	ldr	r3, [r3, #0]
+  16:	4a16      	ldr	r2, [pc, #88]	; (70 <main+0x70>)
+  18:	f423 0370 	bic.w	r3, r3, #15728640	; 0xf00000
+  1c:	6013      	str	r3, [r2, #0]
+  1e:	4b14      	ldr	r3, [pc, #80]	; (70 <main+0x70>)
+  20:	681b      	ldr	r3, [r3, #0]
+  22:	4a13      	ldr	r2, [pc, #76]	; (70 <main+0x70>)
+  24:	f443 1300 	orr.w	r3, r3, #2097152	; 0x200000
+  28:	6013      	str	r3, [r2, #0]
+  2a:	4b12      	ldr	r3, [pc, #72]	; (74 <main+0x74>)
+  2c:	681b      	ldr	r3, [r3, #0]
+  2e:	4a11      	ldr	r2, [pc, #68]	; (74 <main+0x74>)
+  30:	f443 5300 	orr.w	r3, r3, #8192	; 0x2000
+  34:	6013      	str	r3, [r2, #0]
+  36:	2300      	movs	r3, #0
+  38:	607b      	str	r3, [r7, #4]
+  3a:	e002      	b.n	42 <main+0x42>
+  3c:	687b      	ldr	r3, [r7, #4]
+  3e:	3301      	adds	r3, #1
+  40:	607b      	str	r3, [r7, #4]
+  42:	687b      	ldr	r3, [r7, #4]
+  44:	4a0c      	ldr	r2, [pc, #48]	; (78 <main+0x78>)
+  46:	4293      	cmp	r3, r2
+  48:	ddf8      	ble.n	3c <main+0x3c>
+  4a:	4b0a      	ldr	r3, [pc, #40]	; (74 <main+0x74>)
+  4c:	681b      	ldr	r3, [r3, #0]
+  4e:	4a09      	ldr	r2, [pc, #36]	; (74 <main+0x74>)
+  50:	f423 5300 	bic.w	r3, r3, #8192	; 0x2000
+  54:	6013      	str	r3, [r2, #0]
+  56:	2300      	movs	r3, #0
+  58:	603b      	str	r3, [r7, #0]
+  5a:	e002      	b.n	62 <main+0x62>
+  5c:	683b      	ldr	r3, [r7, #0]
+  5e:	3301      	adds	r3, #1
+  60:	603b      	str	r3, [r7, #0]
+  62:	683b      	ldr	r3, [r7, #0]
+  64:	4a04      	ldr	r2, [pc, #16]	; (78 <main+0x78>)
+  66:	4293      	cmp	r3, r2
+  68:	ddf8      	ble.n	5c <main+0x5c>
+  6a:	e7de      	b.n	2a <main+0x2a>
+  6c:	40021018 	.word	0x40021018
+  70:	40011004 	.word	0x40011004
+  74:	4001100c 	.word	0x4001100c
+  78:	000f423f 	.word	0x000f423f

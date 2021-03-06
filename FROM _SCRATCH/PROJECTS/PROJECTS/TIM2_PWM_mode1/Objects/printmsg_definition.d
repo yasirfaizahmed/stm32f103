@@ -1,0 +1,13 @@
+.\objects\printmsg_definition.o: printMsg_definition.c
+.\objects\printmsg_definition.o: usart_debug0.h
+.\objects\printmsg_definition.o: C:\Users\YASIR\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h
+.\objects\printmsg_definition.o: .\RTE\_Target_1\RTE_Components.h
+.\objects\printmsg_definition.o: C:\Users\YASIR\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h
+.\objects\printmsg_definition.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\printmsg_definition.o: C:\Users\YASIR\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\printmsg_definition.o: C:\Users\YASIR\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\printmsg_definition.o: C:\Users\YASIR\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\printmsg_definition.o: C:\Users\YASIR\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h
+.\objects\printmsg_definition.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\printmsg_definition.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\printmsg_definition.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
